@@ -38,6 +38,22 @@ const {
   DATABASE_URL,
 } = process.env;
 
+const GRADE_ROLE_MAP = {
+  stagiar: process.env.ROLE_STAGIAR_ID,
+  adjunct: process.env.ROLE_ADJUNCT_ID,
+  caporal: process.env.ROLE_CAPORAL_ID,
+  sergent: process.env.ROLE_SERGENT_ID,
+  locotenent: process.env.ROLE_LOCOTENENT_ID,
+  senior: process.env.ROLE_SENIOR_ID,
+  capitan: process.env.ROLE_CAPITAN_ID,
+  capitan_sef: process.env.ROLE_CAPITAN_SEF_ID,
+  comandant: process.env.ROLE_COMANDANT_ID,
+  sef_divizie: process.env.ROLE_SEF_DIVIZIE_ID,
+  asistent_sheriff: process.env.ROLE_ASISTENT_SHERIFF_ID,
+  sub_sheriff: process.env.ROLE_SUB_SHERIFF_ID,
+  sheriff_general: process.env.ROLE_SHERIFF_GENERAL_ID,
+};
+
 if (!DISCORD_TOKEN || !CLIENT_ID || !GUILD_ID) process.exit(1);
 if (!DATABASE_URL) process.exit(1);
 
